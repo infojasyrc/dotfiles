@@ -55,7 +55,6 @@ brew install watchman
 # Essentials
 brew install --cask 1password
 brew install --cask iterm2
-brew install --cask osxfuse
 brew install --cask spotify
 
 # Favorite fonts
@@ -64,6 +63,9 @@ brew install --cask font-jetbrains-mono
 brew install --cask font-iosevka
 brew install --cask font-meslo-for-powerline
 brew install --cask font-roboto-mono-for-powerline
+brew install --cask font-inconsolata
+brew install --cask font-inconsolata-for-powerline
+brew install --cask font-inconsolata-g-for-powerline
 
 # Software development
 brew install --cask docker
