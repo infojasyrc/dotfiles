@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Check oh-my-zsh
+if [ -f "~/.oh-my-zsh/oh-my-zsh" ]; then
+    echo "oh-my-zsh is not present"
+    # Install oh-my-zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
 # Check for Homebrew
 ####################
@@ -10,6 +14,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 if [[ $? != 0 ]]; then
     # Install brew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    # TODO: Replace home folder name
+    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/jose_sal_y_rosas/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Make sure we’re using the latest Homebrew.
