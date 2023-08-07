@@ -91,7 +91,7 @@ brew install --cask firefox-developer-edition
 brew install --cask google-chrome
 brew install --cask microsoft-edge
 
-# For enterprise
+# For enterprise: use a conditional for applications below
 brew install --cask box-drive
 brew install --cask slack
 brew install --cask microsoft-teams
@@ -110,6 +110,8 @@ brew install --cask android-studio
 brew cleanup
 
 # NVM configuration
-echo 'export NVM_DIR="$HOME/.nvm"' >> .zshrc
-echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm' >> .zshrc
-echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> .zshrc
+mkdir ~/.nvm
+
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+echo '[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm' >> ~/.zshrc
+echo '[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion' >> ~/.zshrc
