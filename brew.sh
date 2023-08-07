@@ -108,3 +108,8 @@ brew install --cask android-studio
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# NVM configuration
+echo 'export NVM_DIR="$HOME/.nvm"' >> .zshrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm' >> .zshrc
+echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> .zshrc
