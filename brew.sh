@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Check for Homebrew
 ####################
 /usr/local/bin/brew -v > /dev/null
