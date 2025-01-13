@@ -30,10 +30,11 @@ brew upgrade
 BREW_PREFIX=$(brew --prefix)
 
 # Added required extensions
-brew tap "homebrew/cask"
-brew tap "homebrew/cask-fonts"
-brew tap "homebrew/cask-versions"
-brew tap "homebrew/core"
+brew tap homebrew/cask
+brew tap homebrew/cask-fonts
+brew tap homebrew/cask-versions
+brew tap homebrew/core
+brew tap hashicorp/tap
 
 # Install essential binaries.
 brew install make
@@ -58,15 +59,14 @@ brew install nvm
 brew install openjdk
 brew install podman
 brew install sqlite
-brew install terraform
 brew install watchman
+brew install hashicorp/tap/terraform
 
 # Install GUI applications
 
 # Essentials
 brew install --cask 1password
 brew install --cask iterm2
-brew install --cask spotify
 
 # Favorite fonts
 brew install --cask font-fira-mono-for-powerline
@@ -90,6 +90,7 @@ brew install --cask firefox
 brew install --cask firefox-developer-edition
 brew install --cask google-chrome
 brew install --cask microsoft-edge
+brew install --cask brave-browser
 
 # For enterprise: use a conditional for applications below
 brew install --cask box-drive
@@ -101,6 +102,10 @@ brew install --cask flux
 
 # Mobile development
 brew install --cask android-studio
+
+# personal applications
+brew install --cask spotify
+brew install --cask tidal
 
 # TODO: Add a flag to install these
 # brew install --cask virtualbox
